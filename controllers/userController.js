@@ -43,7 +43,7 @@ const loginUser = asyncHandler(async(req,res)=>{
               email:user.email,
               id:user.id
             },
-        },process.env.ACCESS_TOKEN,{expiresIn:'10m'})
+        },process.env.ACCESS_TOKEN,{expiresIn:'2h'})
         res.json({accessToken})
     }else{
       res.status(400)
